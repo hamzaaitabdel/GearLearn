@@ -1,0 +1,139 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <link rel="stylesheet" href="style2.css">
+<meta charset="UTF-8">
+
+    <!-- Title -->
+    <title>GerLearn</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="./img/core-img/favicon.ico">
+
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-popup.scss">
+    <script src="main.js"></script>
+  </head>
+
+  <style>
+    body {
+    
+    background-color: rgb(217, 234, 250);
+    
+    background-repeat: no-repeat;
+  }
+</style>
+  <body>
+    <div class="label1">
+      <label class="titlestory"><strong>Die Geschichte von Hartmut :</strong></label></div>
+
+    <div class="text_area">
+      <textarea id="Geschichte" class="story" readonly name="Geschichte" rows="10" cols="70">
+        Hartmut hat im Februar eine Reise gemacht: Er ist in die Alpen gefahren, in ein kleines Dorf in Österreich. Er hat in einem hübschen Hotel ein Einzelzimmer bekommen.
+        Das Essen im Hotel hat ihm sehr gut geschmeckt. Jeden Morgen ist Hartmut zum Skikurs gegangen. Der Skilehrer, Herr Winter, hat gesagt: "Hartmut ist der beste von meinen Schülern!" Hartmut hat sich sehr gefreut.
+        Am letzten Abend hat die ganze Gruppe Abschied gefeiert. Sie haben viel Wein getrunken. Dann hat Hartmut gesagt: "Ich habe eine Idee! Wir wollen in der Dunkelheit Ski laufen!" Alle haben geantwortet: "Das ist eine tolle Idee!"
+        Sie sind in der Dunkelheit Ski gelaufen. Hartmut hat sich das Bein gebrochen. Armer Hartmut!
+
+      </textarea>
+    </div>
+    <div class="question">
+      <label class="question"><strong> Fragen :</strong></label></div>
+
+    <div class="question1">
+      <label class="question1"><strong>F1 : </strong>Wann hat Hartmut Urlaub gemacht?</label></div>
+
+    <div class="answer1">
+      <label class="answer1"><strong>A1 : </strong></label>
+      <input type="radio" name="answer">Im Sommer
+      <input type="radio" name="answer">Im Herbst
+      <input id="1" type="radio" name="answer">Im Februar
+      <input type="radio" name="answer">In den Alpen</div>
+
+    <div class="question2">
+      <label class="question2"><strong>F2 :</strong>Ist das Hotel gut oder schlecht gewesen?</label></div>
+
+    <div class="answer2">
+      <label class="answer2"><strong>A2 : </strong></label>
+      <input type="radio" name="answer1">Schlecht, denn es war klein
+      <input type="radio" name="answer1">Schlecht, denn es war dort laut
+      <input id="2" type="radio" name="answer1">Gut, das Hotel war hübsch
+      <input type="radio" name="answer1">Schlecht, denn er hatte eine Einzelzimmer</div>
+
+    <div class="question3">
+      <label class="question3"><strong>F3 :</strong>Was hat Hartmut im Urlaub gelernt?</label></div>
+
+    <div class="answer3">
+      <label class="answer3"><strong>A3 : </strong></label>
+        <input type="radio" name="answer2">Wein trinken
+        <input id="3" type="radio" name="answer2">Skifahren
+        <input type="radio" name="answer2">Langes Schlafen
+        <input type="radio" name="answer2">Österreichisch</div>
+
+    <div class="question4">
+      <label class="question4"><strong>F4 :</strong>Was haben die Urlauber am letzten Abend getrunken?</label></div>
+
+    <div class="answer4">
+      <label class="answer4"><strong>A4 : </strong></label>
+        <input type="radio" name="answer3">Nichts
+        <input type="radio" name="answer3">Bier
+        <input id="4" type="radio" name="answer3">Wein
+        <input type="radio" name="answer3">Schnaps</div>
+
+    <div class="question5">
+      <label class="question5"><strong>F5 :</strong>Hat Hartmut eine gute oder eine schlechte Idee gehabt?</label></div>
+
+    <div class="answer5">
+      <label class="answer5"><strong>A5 : </strong></label>
+        <input id="5" type="radio" name="answer4">Die Idee war eigentlich gut, aber gefährlich!
+        <input type="radio" name="answer4">Er hatte keine Idee
+        <input type="radio" name="answer4">Skifahren in der Nacht sollte jeder machen
+        <input type="radio" name="answer4">Keiner mochte seine Idee</div>
+
+    <div class="question 6">
+      <label class="question6"><strong>F6 :</strong>Was ist Hartmut in der Dunkelheit passiert?</label></div>
+
+    <div class="answer6">
+      <label class="answer6"><strong>A6 : </strong></label>
+        <input type="radio" name="answer5">Er hat den Zug verpasst
+        <input type="radio" name="answer5">Er hat nicht mehr das Hotel gefunden
+        <input type="radio" name="answer5">Er hat Wein getrunken
+        <input id="6" type="radio" name="answer5">Er hat sich sein Bein gebrochen</div>
+        <div class="yourscore">
+            <p id="score">Your Score is : </p>
+        </div>
+
+        <script>
+        localStorage.setItem("note",0);
+        var a = 0;
+        var c=0;
+        var con = true;
+        var idan=["1","2","3","4","5","6"];
+
+
+        function check1(){
+            for(var i=1;i<7;i++){
+              var x = document.getElementById(i+"").checked;
+
+                if(x && con){
+                  a = localStorage.getItem("note");
+                  a++;
+                  localStorage.removeItem("note");
+                  localStorage.setItem("note",a);
+                }
+            }
+            console.log(localStorage.getItem("note"));
+            a=0;
+            document.getElementById("score").textContent="Your Score is : "+localStorage.getItem("note");
+            localStorage.removeItem("note");
+            }
+
+
+
+        </script>
+
+          <div class="submit">
+            <a id="myBtn" class="btn uza-btn" onclick="check1()">Submit</a></div>
+
+  </body>
+</html>

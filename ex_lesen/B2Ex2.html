@@ -1,0 +1,129 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <link rel="stylesheet" href="style2.css">
+<meta charset="UTF-8">
+
+    <!-- Title -->
+    <title>GerLearn</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="./img/core-img/favicon.ico">
+
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-popup.scss">
+    <script src="main.js"></script>
+  </head>
+
+  <style>
+    body {
+    
+    background-color: rgb(217, 234, 250);
+    
+    background-repeat: no-repeat;
+  }
+</style>
+  <body>
+    <div class="label1">
+      <label class="titlestory"><strong>Ich und mein Sohn :</strong></label></div>
+
+    <div class="text_area">
+      <textarea id="Geschichte" class="story" readonly name="Geschichte" rows="10" cols="70">
+        Gestern ging ich mit meinem Sohn und meiner Frau in den Tierpark. Wir fuhren zuerst mit der Eisenbahn bis an den Hauptbahnhof. Anschließend bestiegen wir die Straßenbahn und fuhren bis an die Haltestelle Zoologischer Garten. Der Tierpark befindet sich auf einem kleinen Berg oben und wir konnten die wunderbare Aussicht auf die Stadt und den See genießen.
+        Vor der Kasse mussten wir 15 Minuten anstehen, weil an diesem Sonntag viele Parkbesucher anwesend waren. Nachdem wir den Eintritt bezahlt hatten, empfingen uns bereits die ersten Tiere, Königspinguine wohlgemerkt. Es war Fütterungszeit und die Wärter warfen tote Fische in das Pinguingehege.
+        Der Tierpark ist sehr weitläufig und wir trafen im Elefantenpark ein. Vor ein paar Wochen ist ein Elefantenbaby auf die Welt gekommen. Der Kleine lief friedlich umher, fraß immer und wälzte sich im Sand. Nun waren die Affen an der Reihe und wir konnten die verschiedenen Arten (Schimpansen, Gorillas, Orang-Utans, usw.) bestaunen.
+        Die Schimpansen schwangen sich ganz locker von Liane zu Liane, während die Gorillas Müde auf dem Boden lagen. Am Nachmittag sahen wir weitere Tiere, vom Känguru, Zebra, Löwen bis zu den Delfinen, stand alles auf dem Programm. Glücklich und zufrieden verließen wir den Tierpark und fuhren wieder nach Hause.
+      </textarea>
+    </div>
+    <div class="question">
+      <label class="question"><strong> Fragen :</strong></label></div>
+
+    <div class="question1">
+      <label class="question1"><strong>F1 : </strong>Wohin ging der Ausflug der Familie?</label></div>
+
+    <div class="answer1">
+      <label class="answer1"><strong>A1 : </strong></label>
+      <input type="radio" name="answer">in ein Stadion
+      <input id="1" type="radio" name="answer">in einen Tierpark
+      <input type="radio" name="answer">in ein Museum
+      <input type="radio" name="answer">an einen See</div>
+
+    <div class="question2">
+      <label class="question2"><strong>F2 :</strong>Wie lange musste die Familie an der Kasse anstehen?</label></div>
+
+    <div class="answer2">
+      <label class="answer2"><strong>A2 : </strong></label>
+      <input type="radio" name="answer1">Fünf Minuten
+      <input type="radio" name="answer1">Zehn Minuten
+      <input id="2" type="radio" name="answer1">Fünfzehn Minuten
+      <input type="radio" name="answer1">Zwanzig Minuten</div>
+
+    <div class="question3">
+      <label class="question3"><strong>F3 :</strong>Wo befindet sich der Tierpark?</label></div>
+
+    <div class="answer3">
+      <label class="answer3"><strong>A3 : </strong></label>
+        <input type="radio" name="answer2">an einem See
+        <input type="radio" name="answer2">an einem Bahnhof
+        <input id="3" type="radio" name="answer2">auf einem Berg
+        <input type="radio" name="answer2">im Wald</div>
+
+    <div class="question4">
+      <label class="question4"><strong>F4 :</strong>Welches Verkehrsmittel nutzte die Familie?</label></div>
+
+    <div class="answer4">
+      <label class="answer4"><strong>A4 : </strong></label>
+        <input type="radio" name="answer3">das Auto
+        <input type="radio" name="answer3">das Fahrrad
+        <input type="radio" name="answer3">das Schiff
+        <input id="4" type="radio" name="answer3">den Zug</div>
+
+    <div class="question5">
+      <label class="question5"><strong>F5 :</strong>Welches Tier hat ein Baby?</label></div>
+
+    <div class="answer5">
+      <label class="answer5"><strong>A5 : </strong></label>
+        <input id="5" type="radio" name="answer4">Elefant
+        <input type="radio" name="answer4">Gorilla
+        <input type="radio" name="answer4">Löwe
+        <input type="radio" name="answer4">Zebra</div>
+
+        <div class="yourscore">
+            <p id="score">Your Score is : </p>
+        </div>
+
+        <script>
+        localStorage.setItem("note",0);
+        var a = 0;
+        var c=0;
+        var con = true;
+        var idan=["1","2","3","4","5"];
+
+
+        function check1(){
+            for(var i=1;i<6;i++){
+              var x = document.getElementById(i+"").checked;
+
+                if(x && con){
+                  a = localStorage.getItem("note");
+                  a++;
+                  localStorage.removeItem("note");
+                  localStorage.setItem("note",a);
+                }
+            }
+            console.log(localStorage.getItem("note"));
+            a=0;
+            document.getElementById("score").textContent="Your Score is : "+localStorage.getItem("note");
+            localStorage.removeItem("note");
+            }
+
+
+
+        </script>
+
+          <div class="submit">
+            <a id="myBtn" class="btn uza-btn" onclick="check1()">Submit</a></div>
+
+  </body>
+</html>

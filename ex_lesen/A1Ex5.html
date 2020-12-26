@@ -1,0 +1,129 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <link rel="stylesheet" href="style2.css">
+<meta charset="UTF-8">
+
+    <!-- Title -->
+    <title>GerLearn</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="./img/core-img/favicon.ico">
+
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-popup.scss">
+    <script src="main.js"></script>
+  </head>
+  <style>
+    body {
+    
+    background-color: rgb(217, 234, 250);
+    
+    background-repeat: no-repeat;
+  }
+</style>
+
+  <body>
+    <div class="label1">
+      <label class="titlestory"><strong>Die Geschichte der Familie :</strong></label></div>
+
+    <div class="text_area">
+      <textarea id="Geschichte" class="story" readonly name="Geschichte" rows="10" cols="70">
+        Zu meiner Familie gehören vier Personen. Die Mutter bin ich und dann gehört natürlich mein Mann dazu. Wir haben zwei Kinder, einen Sohn, der sechs Jahre alt ist und eine dreijährige Tochter.
+        Wir wohnen in einem kleinen Haus mit einem Garten. Dort können die Kinder ein bisschen spielen. Unser Sohn kommt bald in die Schule, unsere Tochter geht noch eine Zeit lang in den Kindergarten. Meine Kinder sind am Nachmittag zu Hause. So arbeite ich nur halbtags.
+        Eigentlich gehören zu unserer Familie auch noch die Großeltern. Sie wohnen nicht bei uns. Sie haben ein Haus in der Nähe. Die Kinder gehen sie oft besuchen.
+      </textarea>
+    </div>
+    <div class="question">
+      <label class="question"><strong> Fragen :</strong></label></div>
+
+    <div class="question1">
+      <label class="question1"><strong>F1 : </strong>Wie viele Personen hat die Familie?</label></div>
+
+    <div class="answer1">
+      <label class="answer1"><strong>A1 : </strong></label>
+      <input type="radio" name="answer">  3
+      <input id="1" type="radio" name="answer">  4
+      <input type="radio" name="answer">  5
+      <input type="radio" name="answer">  6</div>
+
+    <div class="question2">
+      <label class="question2"><strong>F2 :</strong>Wo wohnt die Familie?</label></div>
+
+    <div class="answer2">
+      <label class="answer2"><strong>A2 : </strong></label>
+      <input type="radio" name="answer1">in einem Garten
+      <input type="radio" name="answer1">in einer Stadt
+      <input type="radio" name="answer1">in einer Wohnung
+      <input id="2" type="radio" name="answer1">in einem Haus</div>
+
+    <div class="question3">
+      <label class="question3"><strong>F3 :</strong>Haben sie Kinder?</label></div>
+
+    <div class="answer3">
+      <label class="answer3"><strong>A3 : </strong></label>
+        <input type="radio" name="answer2">Nein
+        <input type="radio" name="answer2">Ja, ein Kinder
+        <input id="3" type="radio" name="answer2">Ja, zwei Kinder
+        <input type="radio" name="answer2">Ja, drei Kinder</div>
+
+    <div class="question4">
+      <label class="question4"><strong>F4 :</strong>Arbeitet die Mutter?</label></div>
+
+    <div class="answer4">
+      <label class="answer4"><strong>A4 : </strong></label>
+        <input id="4" type="radio" name="answer3">Ja, aber nur halbtags
+        <input type="radio" name="answer3">Ja, sie arbeitet von 9 bis 17 Uhr
+        <input type="radio" name="answer3">Nein, sie ist Hausfrau
+        <input type="radio" name="answer3">Davon steht nichts im Text</div>
+
+    <div class="question5">
+      <label class="question5"><strong>F5 :</strong>Wer gehört noch zur Familie?</label></div>
+
+    <div class="answer5">
+      <label class="answer5"><strong>A5 : </strong></label>
+        <input type="radio" name="answer4">Eine Katze
+        <input type="radio" name="answer4">Ein kleiner Hund
+        <input id="5" type="radio" name="answer4">Oma und Opa
+        <input type="radio" name="answer4">Onkel und Tante</div>
+
+        <div class="yourscore">
+            <p id="score">Your Score is : </p>
+        </div>
+
+        <script>
+        localStorage.setItem("note",0);
+        var a = 0;
+        var c=0;
+        var con = true;
+        var idan=["1","2","3","4","5"];
+
+
+        function check1(){
+            for(var i=1;i<6;i++){
+              var x = document.getElementById(i+"").checked;
+
+                if(x && con){
+                  a = localStorage.getItem("note");
+                  a++;
+                  localStorage.removeItem("note");
+                  localStorage.setItem("note",a);
+                }
+            }
+            console.log(localStorage.getItem("note"));
+            a=0;
+            document.getElementById("score").textContent="Your Score is : "+localStorage.getItem("note");
+            localStorage.removeItem("note");
+            }
+
+
+
+        </script>
+
+          <div class="submit">
+            <a id="myBtn" class="btn uza-btn" onclick="check1()">Submit</a></div>
+
+
+  </body>
+</html>

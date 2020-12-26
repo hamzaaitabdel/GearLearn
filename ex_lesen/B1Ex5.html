@@ -1,0 +1,130 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <link rel="stylesheet" href="style2.css">
+<meta charset="UTF-8">
+
+    <!-- Title -->
+    <title>GerLearn</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="./img/core-img/favicon.ico">
+
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-popup.scss">
+    <script src="main.js"></script>
+  </head>
+
+  <style>
+    body {
+    
+    background-color: rgb(217, 234, 250);
+    
+    background-repeat: no-repeat;
+  }
+</style>
+  <body>
+    <div class="label1">
+      <label class="titlestory"><strong>Sommerferien in Deutschland :</strong></label></div>
+
+    <div class="text_area">
+      <textarea id="Geschichte" class="story" readonly name="Geschichte" rows="10" cols="70">
+        Die Sommerferien in Deutschland sind mit sechs Wochen die längsten Ferien des Jahres. In der Regel finden sie zwischen Juli und September statt.
+        In den meisten Bundesländern beginnen die Sommerferien zu unterschiedlichen Terminen. Bevor die Ferien beginnen, bekommen Schüler in der Schule ihr Zeugnis.
+        Viele Deutsche verreisen in den Sommerferien. Italien und Spanien sind beliebte Urlaubsziele. Ganz besonders beliebt bei den Deutschen ist die Insel Mallorca.
+        Einigen Menschen fehlt jedoch das Geld, um weite Reisen zu machen. Sie bleiben zuhause und genießen die freie Zeit oder verreisen innerhalb Deutschlands. Besonders der Norden hat viele Urlaubsstrände zu bieten, an denen man sich gut erholen kann.
+      </textarea>
+    </div>
+    <div class="question">
+      <label class="question"><strong> Fragen :</strong></label></div>
+
+    <div class="question1">
+      <label class="question1"><strong>F1 : </strong>Wie lange dauern die Sommerferien?</label></div>
+
+    <div class="answer1">
+      <label class="answer1"><strong>A1 : </strong></label>
+      <input type="radio" name="answer">Einen Monat
+      <input type="radio" name="answer">Zwei Monat
+      <input id="1" type="radio" name="answer">Sechs Wochen
+      <input type="radio" name="answer">Fünf Wochen</div>
+
+    <div class="question2">
+      <label class="question2"><strong>F2 :</strong>Wann finden die Sommerferien in der Regel statt?</label></div>
+
+    <div class="answer2">
+      <label class="answer2"><strong>A2 : </strong></label>
+      <input type="radio" name="answer1">Zwischen Juni und August
+      <input id="2" type="radio" name="answer1">Zwischen Juli und September
+      <input type="radio" name="answer1">Zwischen März und August
+      <input type="radio" name="answer1">Zwischen August und September</div>
+
+    <div class="question3">
+      <label class="question3"><strong>F3 :</strong>Was bekommen die Schüler vor Ferienbeginn?</label></div>
+
+    <div class="answer3">
+      <label class="answer3"><strong>A3 : </strong></label>
+        <input type="radio" name="answer2">Kaffee und Kuchen
+        <input type="radio" name="answer2">Neue Schulbücher
+        <input type="radio" name="answer2">Einen neuen Lehrer
+        <input id="3" type="radio" name="answer2">Zeugnisse</div>
+
+    <div class="question4">
+      <label class="question4"><strong>F4 :</strong>Welche Insel ist besonders beliebt bei den Deutschen?</label></div>
+
+    <div class="answer4">
+      <label class="answer4"><strong>A4 : </strong></label>
+        <input type="radio" name="answer3">Italien
+        <input id="4" type="radio" name="answer3">Mallorca
+        <input type="radio" name="answer3">Spanien
+        <input type="radio" name="answer3">England</div>
+
+    <div class="question5">
+      <label class="question5"><strong>F5 :</strong>Wo gibt es in Deutschland besonders viele Urlaubsstrände?</label></div>
+
+    <div class="answer5">
+      <label class="answer5"><strong>A5 : </strong></label>
+        <input id="5" type="radio" name="answer4">Im Norden
+        <input type="radio" name="answer4">Im Süden
+        <input type="radio" name="answer4">Im Ostend
+        <input type="radio" name="answer4">Im Westen</div>
+
+        <div class="yourscore">
+            <p id="score">Your Score is : </p>
+        </div>
+
+        <script>
+        localStorage.setItem("note",0);
+        var a = 0;
+        var c=0;
+        var con = true;
+        var idan=["1","2","3","4","5"];
+
+
+        function check1(){
+            for(var i=1;i<6;i++){
+              var x = document.getElementById(i+"").checked;
+
+                if(x && con){
+                  a = localStorage.getItem("note");
+                  a++;
+                  localStorage.removeItem("note");
+                  localStorage.setItem("note",a);
+                }
+            }
+            console.log(localStorage.getItem("note"));
+            a=0;
+            document.getElementById("score").textContent="Your Score is : "+localStorage.getItem("note");
+            localStorage.removeItem("note");
+            }
+
+
+
+        </script>
+
+          <div class="submit">
+            <a id="myBtn" class="btn uza-btn" onclick="check1()">Submit</a></div>
+
+
+  </body>
+</html>

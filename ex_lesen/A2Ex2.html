@@ -1,0 +1,130 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <link rel="stylesheet" href="style2.css">
+<meta charset="UTF-8">
+
+    <!-- Title -->
+    <title>GerLearn</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="./img/core-img/favicon.ico">
+
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-popup.scss">
+    <script src="main.js"></script>
+  </head>
+  <style>
+    body {
+    
+    background-color: rgb(217, 234, 250);
+    
+    background-repeat: no-repeat;
+  }
+</style>
+
+  <body>
+    <div class="label1">
+      <label class="titlestory"><strong>Jahr :</strong></label></div>
+
+    <div class="text_area">
+      <textarea id="Geschichte" class="story" readonly name="Geschichte" rows="10" cols="70">
+        Ein neues Jahr besteht aus insgesamt vier Jahreszeiten. Frühling, Sommer, Herbst und Winter folgen nacheinander. Das Jahr beginnt im Januar. Im Januar und Februar ist es draußen noch sehr kalt und man muss sich warm anziehen, um nicht zu frieren und krank zu werden.
+        Der Frühling beginnt im März. Dann steigen die Temperaturen und es wird wieder wärmer. In den Monaten März, April und Mai ist Frühling.
+        Von Juni bis September findet der Sommer statt. Der Sommer ist die heißeste Jahreszeit in Deutschland. Viele Menschen fahren in dieser Zeit in den Urlaub. Ab Mitte September bis November gibt es in Deutschland den Herbst. Dann wird es draußen langsam kälter und man muss sich wieder wärmer anziehen.
+        Der November und Dezember sind die letzten Monate des Jahres. Dann stellt sich der Winter ein. Wenn es besonders kalt ist, kann es im Winter schneien.
+
+      </textarea>
+    </div>
+    <div class="question">
+      <label class="question"><strong> Fragen :</strong></label></div>
+
+    <div class="question1">
+      <label class="question1"><strong>F1 : </strong>Mit welcher Jahreszeit beginnt ein Jahr?</label></div>
+
+    <div class="answer1">
+      <label class="answer1"><strong>A1 : </strong></label>
+      <input type="radio" name="answer">Mit dem Sommer
+      <input type="radio" name="answer">Mit dem Frühling
+      <input id="1" type="radio" name="answer">Mit dem Winter
+      <input type="radio" name="answer">Mit dem Herbst</div>
+
+    <div class="question2">
+      <label class="question2"><strong>F2 :</strong>Wann ist es in Deutschland am wärmsten?</label></div>
+
+    <div class="answer2">
+      <label class="answer2"><strong>A2 : </strong></label>
+      <input type="radio" name="answer1">Im Frühling
+      <input id="2" type="radio" name="answer1">Im Sommer
+      <input type="radio" name="answer1">Im Herbst
+      <input type="radio" name="answer1">Im Winter</div>
+
+    <div class="question3">
+      <label class="question3"><strong>F3 :</strong>In welchen Monaten ist (laut Text) Herbst in Deutschland?</label></div>
+
+    <div class="answer3">
+      <label class="answer3"><strong>A3 : </strong></label>
+        <input id="3" type="radio" name="answer2">Von September bis November
+        <input type="radio" name="answer2">Von Januar bis Februar
+        <input type="radio" name="answer2">Von März bis Mai
+        <input type="radio" name="answer2">Von November bis Dezember</div>
+
+    <div class="question4">
+      <label class="question4"><strong>F4 :</strong>In welcher Jahreszeit ist es am kältesten in Deutschland?</label></div>
+
+    <div class="answer4">
+      <label class="answer4"><strong>A4 : </strong></label>
+        <input type="radio" name="answer3">Im Frühling
+        <input type="radio" name="answer3">Im Sommer
+        <input type="radio" name="answer3">Im Herbst
+        <input id="4" type="radio" name="answer3">Im Winter</div>
+
+    <div class="question5">
+      <label class="question5"><strong>F5 :</strong>Was passiert, wenn es im Winter besonders kalt wird?</label></div>
+
+    <div class="answer5">
+      <label class="answer5"><strong>A5 : </strong></label>
+        <input type="radio" name="answer4">Es scheint die Sonne
+        <input id="5" type="radio" name="answer4">Es schneit
+        <input type="radio" name="answer4">Es regnet
+        <input type="radio" name="answer4">Es wird dunkel draußen</div>
+
+        <div class="yourscore">
+            <p id="score">Your Score is : </p>
+        </div>
+
+        <script>
+        localStorage.setItem("note",0);
+        var a = 0;
+        var c=0;
+        var con = true;
+        var idan=["1","2","3","4","5"];
+
+
+        function check1(){
+            for(var i=1;i<6;i++){
+              var x = document.getElementById(i+"").checked;
+
+                if(x && con){
+                  a = localStorage.getItem("note");
+                  a++;
+                  localStorage.removeItem("note");
+                  localStorage.setItem("note",a);
+                }
+            }
+            console.log(localStorage.getItem("note"));
+            a=0;
+            document.getElementById("score").textContent="Your Score is : "+localStorage.getItem("note");
+            localStorage.removeItem("note");
+            }
+
+
+
+        </script>
+
+          <div class="submit">
+            <a id="myBtn" class="btn uza-btn" onclick="check1()">Submit</a></div>
+
+  </body>
+</html>

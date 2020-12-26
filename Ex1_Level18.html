@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hören</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="GerLearn">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel = "stylesheet" href = "Un.css">
+	<link rel = "stylesheet" href = "style.css">
+
+</head>
+<body>
+		   
+	<div id="preloader">
+		<div class="wraper">
+			<div class="cssload-loader"></div>
+		</div>
+	</div>
+
+	<!-- ***** Top Search Area Start ***** -->
+	<div class="top-search-area">
+		<!-- Search Modal -->
+		<div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-body">
+						<!-- Close Button -->
+						<button type="button" class="btn close-btn" data-dismiss="modal"><i class="fa fa-times"></i></button>
+						<!-- Form -->
+						<form action="index-n.php" method="post">
+							<input type="search" name="top-search-bar" class="form-control" placeholder="Search and hit enter...">
+							<button type="submit">Search</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- ***** Top Search Area End ***** -->
+ </head>
+  <header class="header-area">
+	<!-- Main Header Start -->
+	<div class="main-header-area">
+	<div class="classy-nav-container breakpoint-off">
+	<!-- Classy Menu -->
+	<nav class="classy-navbar justify-content-between" id="uzaNav">
+
+	<!-- Logo -->
+	 <a class="nav-brand" href="index-n.php"><img src="./img/core-img/logo.png" alt=""></a>
+
+	<!-- Navbar Toggler -->
+	<div class="classy-navbar-toggler">
+	 <span class="navbarToggler"><span></span><span></span><span></span></span>
+	</div>
+
+	<!-- Menu -->
+	<div class="classy-menu">
+	 <!-- Menu Close Button -->
+	  <div class="classycloseIcon">
+	   <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+	  </div>
+	 <!-- Nav Start -->
+	  <div class="classynav">
+	 <!-- Get A Quote -->
+	 <div class="get-a-quote ml-4 mr-3">
+	  <a href="#" class="btn uza-btn">Get A Quote</a>
+	 </div>
+
+	 <!-- Search Icon -->
+	 <div class="search-icon" data-toggle="modal" data-target="#searchModal">
+	  <i class="icon_search"></i>
+	 </div>
+	 </div>
+	 <!-- Nav End -->
+    </div>
+	</nav>
+   </div>
+  </div>
+ </header>
+ <!-- ***** Header Area End ***** -->
+  <!-- ***** Breadcrumb Area Start ***** -->
+   <div class="breadcrumb-area">
+	<div class="container h-100">
+     <div class="row h-100 align-items-end">
+	  <div class="col-12">
+	  <h1 style="text-align: left;" style="margin :10em">Hören</h1>
+	   <div class="breadcumb--con">
+		<nav aria-label="breadcrumb">
+		 <ol class="breadcrumb">
+		 <li class="breadcrumb-item"><a href="index-n.php"><i class="fa fa-home"></i> Home</a></li>
+		 <li class="breadcrumb-item"><a href="services.html">Services</a></li>
+         <li class="breadcrumb-item"><a href="hören-menu.html">Hören</a></li>
+         <li class="breadcrumb-item"><a href="hören-Level-menu-B1.html 	">B1</a></li>
+		 <li class="breadcrumb-item active" aria-current="page">Level 18</li>
+		 </ol>
+        </nav>
+       </div>
+	  </div>
+	 </div>
+	</div>
+ <!-- Background Curve -->
+  <div class="breadcrumb-bg-curve">
+   <img src="./img/core-img/curve-5.png" alt="">
+  </div>
+ <!--Audio-->
+ <br/>
+ <h4>Hören Sie den Anfang eines Gesprächs zwischen den Doktoranden Fabian und Svenja und Ihrem Professor Hern Nolte. Was ist richtig ?</h4>
+<div class = "audio"> <br/>
+    <audio controls > <source src = "Audio/B1/Track_001.mp3" ></audio>
+</div><br/>
+<p class="parag">Fabian und Svenja haben die Führerscheinprüfung</p>
+<div class="div 1">
+	<input id="a" type="radio" class ="c1"  name="l" onclick="check1()"> 
+	<label id="text1" for = "a" >vor ein paar Monaten .</label><br/>
+	<input id="b" type="radio" class ="c1"  name="l" onclick="check1()" >
+	<label id="text2" for = "b" >noch nicht abgelegt.</label><br/>
+</div>
+<script>
+	function check1(){
+	localStorage.setItem("note",0);
+	var cpt = 0 ;
+	var v = document.getElementById("a").checked;
+	var w = document.getElementById("b").checked;
+	if(v) document.getElementById("text1").style.color = " red" ;
+	else if(w) {document.getElementById("text2").style.color = " rgb(14, 233, 14)" ;
+	cpt = localStorage.getItem("note");
+	cpt++;
+	localStorage.removeItem("note");
+	localStorage.setItem("note",cpt);}
+	document.getElementById("a").disabled=true;
+	document.getElementById("b").disabled=true;
+	console.log(localStorage.getItem("note"));
+	cpt=0;
+	document.getElementById("score").textContent="Your Score is :"+ localStorage.getItem("note") + "/2";}
+</script>
+
+<p class="parag">Professor Nolte hat den Führerschein </p>
+<div class="div 1">
+	<input id="c" type="radio" class ="c1"  name="g" onclick="check2()"> 
+	<label id="text3" for = "c" >mit 18 Jahren.</label><br/>
+	<input id="d" type="radio" class ="c1"  name="g" onclick="check2()">
+	<label id="text4" for = "d" >nach dem Abitur gemacht.</label><br/>
+</div>
+<script>
+	function check2(){
+	var n = document.getElementById("c").checked;
+	var nn = document.getElementById("d").checked;
+	if(n) {document.getElementById("text3").style.color = "rgb(14, 233, 14) " ;
+	cpt = localStorage.getItem("note");
+	cpt++;
+	localStorage.removeItem("note");
+	localStorage.setItem("note",cpt);}
+	else if(nn) document.getElementById("text4").style.color = "red " ;
+	document.getElementById("c").disabled=true;
+	document.getElementById("d").disabled=true;
+	console.log(localStorage.getItem("note"));
+	cpt=0;
+	document.getElementById("score").textContent="Your Score is :"+ localStorage.getItem("note") + "/2";
+	localStorage.removeItem("note");}
+</script>
+
+
+<a href="Ex2_Level18.html" class="btn uza-btnn btn-2 mt-4" >Next</a><br/><br/>
+<h2 class="btn uza-btnn" id="score">Your Score is :</h2><br/>
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/uza.bundle.js"></script>
+<script src="js/default-assets/active.js"></script>
+</body>
+</html>

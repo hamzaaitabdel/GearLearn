@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="Drag-exercices-menu.css">
+    <script src="index.js"></script>
+</head>
+<body>
+       <!-- Preloader -->
+       <div id="preloader">
+        <div class="wrapper">
+            <div class="cssload-loader"></div>
+        </div>
+    </div>
+    <div class="menu-container">
+  
+        <div class="hex-wrapper">
+          <div class="hex-row shift">
+            <div class="hexagon" id="nav-home">
+              Home
+              <script> document.getElementById("nav-home").addEventListener("click", function RedirectionJavascript(){
+                document.location.href="index-n.php"; 
+              });</script>
+              <div class="face1"></div>
+              <div class="face2"></div>
+            </div>
+          </div>
+          <div class="hex-row">
+            <div class="hexagon" id="nav-about">
+              Obst
+              <script> document.getElementById("nav-about").addEventListener("click", function RedirectionJavascript(){
+                document.location.href="./drag-exercices.php"; 
+              });</script>
+              <div class="face1"></div>
+              <div class="face2"></div>
+            </div>
+            <div class="hexagon" id="nav-work">
+              Tier
+              <script> document.getElementById("nav-work").addEventListener("click", function RedirectionJavascript(){
+                document.location.href="./drag-exercices-t1.php"; 
+              });</script>
+              <div class="face1"></div>
+              <div class="face2"></div>
+            </div>
+            
+          </div>
+          <div class="hex-row shift">
+            <div class="hexagon" id="nav-contact">
+              Möbel
+              <script> document.getElementById("nav-contact").addEventListener("click", function RedirectionJavascript(){
+                document.location.href="./drag-exercices-f1.php"; 
+              });</script>
+              <div class="face1"></div>
+              <div class="face2"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>

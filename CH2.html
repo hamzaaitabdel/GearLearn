@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>My Forme</title>
+		<meta charset="UTF-8">
+		<meta name="description" content="GerLearn">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel = "stylesheet" href = "style.css">
+	</head>
+	<body>
+	   
+		<div id="preloader">
+			<div class="wraper">
+				<div class="cssload-loader"></div>
+			</div>
+		</div>
+		<!-- ***** Top Search Area Start ***** -->
+		<div class="top-search-area">
+			<!-- Search Modal -->
+			<div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-body">
+							<!-- Close Button -->
+							<button type="button" class="btn close-btn" data-dismiss="modal"><i class="fa fa-times"></i></button>
+							<!-- Form -->
+							<form action="index.html" method="post">
+								<input type="search" name="top-search-bar" class="form-control" placeholder="Search and hit enter...">
+								<button type="submit">Search</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- ***** Top Search Area End ***** -->
+	 </head>
+	  <header class="header-area">
+		<!-- Main Header Start -->
+		<div class="main-header-area">
+			<div class="classy-nav-container breakpoint-off">
+				<!-- Classy Menu -->
+				<nav class="classy-navbar justify-content-between" id="uzaNav">
+	
+					<!-- Logo -->
+					<a class="nav-brand" href="index.html"><img src="./img/core-img/logo.png" alt=""></a>
+	
+					<!-- Navbar Toggler -->
+					<div class="classy-navbar-toggler">
+						<span class="navbarToggler"><span></span><span></span><span></span></span>
+                    </div>
+	
+					<!-- Menu -->
+					<div class="classy-menu">
+						<!-- Menu Close Button -->
+						<div class="classycloseIcon">
+							<div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+						</div>
+						<!-- Nav Start -->
+						<div class="classynav">
+							<ul id="nav">
+								<li><a href="./CH.html">Sign in</a></li>
+								<li class="current-item"><a href="./CH2.html">Sign up</a></liclass="current-item">
+							</ul>
+	
+							<!-- Get A Quote -->
+							<div class="get-a-quote ml-4 mr-3">
+								<a href="#" class="btn uza-btn">Get A Quote</a>
+							</div>
+							<!-- Search Icon -->
+							<div class="search-icon" data-toggle="modal" data-target="#searchModal">
+								<i class="icon_search"></i>
+							</div>
+						</div>
+						<!-- Nav End -->
+					</div>
+				</nav>
+			</div>
+		</div>
+	 </header>
+	 <!-- ***** Header Area End ***** -->
+	 <!-- ***** Breadcrumb Area Start ***** -->
+	 <div class="breadcrumb-area">
+		<div class="container h-100">
+			<div class="row h-100 align-items-end">
+				<div class="col-12">
+					<h1 style="text-align: left;" style="margin :10em">Sign-Up</h1>
+					<div class="breadcumb--con">
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item"><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+								<li class="breadcrumb-item active" aria-current="page">Sign-up</li>
+							</ol>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Background Curve -->
+		<div class="breadcrumb-bg-curve">
+			<img src="./img/core-img/curve-5.png" alt="">
+		</div>
+	</div>
+
+	<!-- ***** Breadcrumb Area End ***** -->
+	 <body class="form">
+		<div class="content">
+            <div class="inscription-content">
+                <!--form connection-->
+				<div class="content">
+					<div class="connection-form">
+						<form class = "form-detail" id="myform" action="#" method="post">
+							<fieldset>
+								<br/>
+								<div class="                                                                                                                                                                                         ">
+									<div class="uza-contact-form mb-80">
+										<div class="contact-heading mb-50">
+											<h4 style="text-align: center;">Thank you for your interest. <br>Please fill out the form below to inquire about our work in Digital.</h4>
+										</div>
+											<div class="row">
+												<div class="col-lg-6">	
+													<div class="form-group">
+														<input type="text" class="form-control mb-30" name="full-name" id="name" placeholder="Name">
+													</div>
+													<div class="form-group">
+														<input type="Email" class="form-control mb-30" name="Email" id="Email" placeholder="Email"> 
+													</div>	
+                                                    <div class ="form-group">
+                                                        <input id = "tel" class="form-control mb-30" type="number" placeholder = "Numero de Telephone ">
+													</div>
+                                                    <div class = "form-group">
+                                                        <label for="naissance" class = "forme-controle" >Votre date de naissance :</label>
+                                                        <input class="form-control mb-30" type ="date" id="naissance" name = "naissance">
+													</div>
+                                                    <div class = "form-group">
+                                                        <label for="Sexe" class = "forme-controle" >Votre sexe est : </label><br>
+                                                        <input type = "radio" class = "forme-controle" id="Homme" name ="sexe " value = "Homme" >
+                                                        <label for = "Homme" > Homme </label><br>
+                                                        <input type = "radio" class = "forme-controle" id="Femme" name ="sexe " value = "Femme" >
+                                                        <label for = "Femme" > Femme </label> <br>
+													</div>
+											        <div class="form-group">
+													    <input type = "password" class="form-control mb-30" id = "pass" name ="pass " placeholder = "password"> 
+                                                    </div>
+                                                    <div class="form-group">
+													    <input type = "password" class="form-control mb-30" id = "pass" name ="Cpass " placeholder = "confirmer password"> 
+                                                    </div>
+												</div>
+												
+										    </div>	
+								<div class="div1">
+									<a href="CH.html" class="lien">I am already a member</a><br/><br/>
+								</div>
+								<div class="div1">
+									<a href="" type="submit" onclick="SingUp()" class="btn uza-btn btn-2 mt-4">Sign Up</a>
+                                    <a href="" class="btn uza-btn btn-2 mt-4">Cancel</a>
+								</div><br/>
+							</fieldset>	
+						</form>
+					</div>
+                </div>
+            </div>
+		</div>
+		<script src="Code JS.js"></script>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/popper.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/uza.bundle.js"></script>
+		<script src="js/default-assets/active.js"></script>
+    </body>

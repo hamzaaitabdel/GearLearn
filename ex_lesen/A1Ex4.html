@@ -1,0 +1,129 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <link rel="stylesheet" href="style2.css">
+<meta charset="UTF-8">
+
+    <!-- Title -->
+    <title>GerLearn</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="./img/core-img/favicon.ico">
+
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-popup.scss">
+    <script src="main.js"></script>
+  </head>
+  <style>
+    body {
+    
+    background-color: rgb(217, 234, 250);
+    
+    background-repeat: no-repeat;
+  }
+</style>
+
+  <body>
+    <div class="label1">
+      <label class="titlestory"><strong>Die Geschichte von Ricarda :</strong></label></div>
+
+    <div class="text_area">
+      <textarea id="Geschichte" class="story" readonly name="Geschichte" rows="10" cols="70">
+        Ricarda ist 21 Jahre alt und wohnt in Lübeck. Lübeck ist eine sehr schöne Stadt im Norden von Deutschland. Ricarda studiert Medizin an der Universität von Lübeck. Sie hat viele Freunde dort.
+        Ricardas beste Freundin heißt Maike. Maike ist 22 und wohnt nicht in Lübeck. Sie wohnt in Hamburg, aber besucht ihre Freundin oft in Lübeck.
+        Sie treffen sich gerne im Park. Meistens gehen sie dann zusammen Eis essen. Danach gehen sie manchmal noch einkaufen. Ricarda kauft am liebsten neue Schuhe. Maike kauft sich lieber neuen Schmuck. Am Abend gehen sie gern ins Kino. Maike übernachtet dann oft bei Ricarda.
+      </textarea>
+    </div>
+    <div class="question">
+      <label class="question"><strong> Fragen :</strong></label></div>
+
+    <div class="question1">
+      <label class="question1"><strong>F1 : </strong>Was studiert Ricarda?</label></div>
+
+    <div class="answer1">
+      <label class="answer1"><strong>A1 : </strong></label>
+      <input type="radio" name="answer">Jura
+      <input type="radio" name="answer">Wirtschaft
+      <input type="radio" name="answer">Lehramt
+      <input id="1" type="radio" name="answer">Medizin</div>
+
+    <div class="question2">
+      <label class="question2"><strong>F2 :</strong>Wie alt ist Maike?</label></div>
+
+    <div class="answer2">
+      <label class="answer2"><strong>A2 : </strong></label>
+      <input type="radio" name="answer1">19 Jahre
+      <input type="radio" name="answer1">20 Jahre
+      <input type="radio" name="answer1">21 Jahre
+      <input id="2" type="radio" name="answer1">22 Jahre</div>
+
+    <div class="question3">
+      <label class="question3"><strong>F3 :</strong>Wo wohnt Maike?</label></div>
+
+    <div class="answer3">
+      <label class="answer3"><strong>A3 : </strong></label>
+        <input type="radio" name="answer2">Sie wohnt in Lübeck
+        <input id="3" type="radio" name="answer2">Sie wohnt in Hamburg
+        <input type="radio" name="answer2">Sie wohnt in Berlin
+        <input type="radio" name="answer2">Das steht nicht im Text</div>
+
+    <div class="question4">
+      <label class="question4"><strong>F4 :</strong>Was kauft Ricarda am liebsten?</label></div>
+
+    <div class="answer4">
+      <label class="answer4"><strong>A4 : </strong></label>
+        <input type="radio" name="answer3">Essen und Trinken
+        <input type="radio" name="answer3">Schmuck
+        <input id="4" type="radio" name="answer3">Neue Schuhe
+        <input type="radio" name="answer3">Filme</div>
+
+    <div class="question5">
+      <label class="question5"><strong>F5 :</strong>Wohin gehen sie gern abends?</label></div>
+
+    <div class="answer5">
+      <label class="answer5"><strong>A5 : </strong></label>
+        <input type="radio" name="answer4">Kaffeetrinken
+        <input type="radio" name="answer4">Eisessen
+        <input type="radio" name="answer4">Einkaufen
+        <input id="5" type="radio" name="answer4">Ins Kino</div>
+        <div class="yourscore">
+            <p id="score">Your Score is : </p>
+        </div>
+
+        <script>
+        localStorage.setItem("note",0);
+        var a = 0;
+        var c=0;
+        var con = true;
+        var idan=["1","2","3","4","5"];
+
+
+        function check1(){
+            for(var i=1;i<6;i++){
+              var x = document.getElementById(i+"").checked;
+
+                if(x && con){
+                  a = localStorage.getItem("note");
+                  a++;
+                  localStorage.removeItem("note");
+                  localStorage.setItem("note",a);
+                }
+            }
+            console.log(localStorage.getItem("note"));
+            a=0;
+            document.getElementById("score").textContent="Your Score is : "+localStorage.getItem("note");
+            localStorage.removeItem("note");
+            }
+
+
+
+        </script>
+
+          <div class="submit">
+            <a id="myBtn" class="btn uza-btn" onclick="check1()">Submit</a></div>
+
+
+
+  </body>
+</html>

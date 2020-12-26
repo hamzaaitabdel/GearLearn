@@ -1,0 +1,132 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <link rel="stylesheet" href="style2.css">
+<meta charset="UTF-8">
+
+    <!-- Title -->
+    <title>GerLearn</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="./img/core-img/favicon.ico">
+
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-popup.scss">
+    <script src="main.js"></script>
+  </head>
+
+  <style>
+    body {
+    
+    background-color: rgb(217, 234, 250);
+    
+    background-repeat: no-repeat;
+  }
+</style>
+  <body>
+    <div class="label1">
+      <label class="titlestory"><strong>Freitag :</strong></label></div>
+
+    <div class="text_area">
+      <textarea id="Geschichte" class="story" readonly name="Geschichte" rows="10" cols="70">
+Heute ist Freitag. Wir haben heute Morgen in unseren Kühlschrank geschaut und gesehen, dass er leer ist. Da wir am Wochenende viele von unseren Freunden zu einer Party eingeladen haben, müssen wir nun einen Großeinkauf machen.
+Unsere Freunde sind sehr unterschiedlich, einige möchten gerne alkoholische Getränke, andere lieber nur Saft oder Wasser. Also müssen wir viele verschiedene Sachen einkaufen. Wir haben entschieden, einige Salate zu machen, sodass wir nun viel Obst und Gemüse kaufen.
+Wenn das Wetter schön ist, könnten wir auch einen Grill auf den Balkon stellen. Das bedeutet, wir müssen auch Würstchen und ein bisschen Fleisch kaufen, damit alle Gäste zufrieden sind. Wir hoffen, dass es ein schönes Fest wird.
+
+      </textarea>
+    </div>
+    <div class="question">
+      <label class="question"><strong> Fragen :</strong></label></div>
+
+    <div class="question1">
+      <label class="question1"><strong>F1 : </strong>Was ist für das Wochenende geplant?</label></div>
+
+    <div class="answer1">
+      <label class="answer1"><strong>A1 : </strong></label>
+      <input type="radio" name="answer">Ein Ausflug
+      <input id="1" type="radio" name="answer">Ein Fest
+      <input type="radio" name="answer">Ein Großeinkauf
+      <input type="radio" name="answer">Eine Reise</div>
+
+
+
+    <div class="question2">
+      <label class="question2"><strong>F2 :</strong>Was trinken die Freunde am liebsten?</label></div>
+
+    <div class="answer2">
+      <label class="answer2"><strong>A2 : </strong></label>
+        <input type="radio" name="answer1">Alle Freunde lieben alkoholische Getränke
+        <input id="2" type="radio" name="answer1">Nur einige Freunde trinken Alkohol
+        <input type="radio" name="answer1">Saft und Wasser
+        <input type="radio" name="answer1">Alkoholfreies Bier</div>
+
+    <div class="question3">
+      <label class="question3"><strong>F3 :</strong>Was soll bei schönem Wetter gemacht werden?</label></div>
+
+    <div class="answer3">
+      <label class="answer3"><strong>A3 : </strong></label>
+        <input id="3" type="radio" name="answer2">Grillen auf dem Balkon
+        <input type="radio" name="answer2">Ein Treffen mit Freunden
+        <input type="radio" name="answer2">Ein Ausflug ans Wasser
+        <input type="radio" name="answer2">Grillen im Park</div>
+
+    <div class="question4">
+      <label class="question4"><strong>F4 :</strong>Wer kommt alles zur Party?</label></div>
+
+    <div class="answer4">
+      <label class="answer4"><strong>A4 : </strong></label>
+        <input type="radio" name="answer3">Arbeitskollegen
+        <input type="radio" name="answer3">Die Familie
+        <input type="radio" name="answer3">Die Eltern
+        <input id="4" type="radio" name="answer3">Alle Freunde</div>
+
+    <div class="question5">
+      <label class="question5"><strong>F5 :</strong>Was bekommen die Gäste zu essen?</label></div>
+
+    <div class="answer5">
+      <label class="answer5"><strong>A5 : </strong></label>
+        <input type="radio" name="answer4">Kuchen
+        <input type="radio" name="answer4">Obst, Gemüse und Käse
+        <input id="5" type="radio" name="answer4">Salate und Gegrilltes
+        <input type="radio" name="answer4">Es gibt nur Getränke</div>
+
+        <div class="yourscore">
+            <p id="score">Your Score is : </p>
+        </div>
+
+        <script>
+        localStorage.setItem("note",0);
+        var a = 0;
+        var c=0;
+        var con = true;
+        var idan=["1","2","3","4","5"];
+
+
+        function check1(){
+            for(var i=1;i<6;i++){
+              var x = document.getElementById(i+"").checked;
+
+                if(x && con){
+                  a = localStorage.getItem("note");
+                  a++;
+                  localStorage.removeItem("note");
+                  localStorage.setItem("note",a);
+                }
+            }
+            console.log(localStorage.getItem("note"));
+            a=0;
+            document.getElementById("score").textContent="Your Score is : "+localStorage.getItem("note");
+            localStorage.removeItem("note");
+            }
+
+
+
+        </script>
+
+          <div class="submit">
+            <a id="myBtn" class="btn uza-btn" onclick="check1()">Submit</a></div>
+
+
+  </body>
+</html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hören</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="GerLearn">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel = "stylesheet" href = "Un.css">
+	<link rel = "stylesheet" href = "style.css">
+
+</head>
+<body>
+		   
+	<div id="preloader">
+		<div class="wraper">
+			<div class="cssload-loader"></div>
+		</div>
+	</div>
+
+	<!-- ***** Top Search Area Start ***** -->
+	<div class="top-search-area">
+		<!-- Search Modal -->
+		<div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-body">
+						<!-- Close Button -->
+						<button type="button" class="btn close-btn" data-dismiss="modal"><i class="fa fa-times"></i></button>
+						<!-- Form -->
+						<form action="index-n.php" method="post">
+							<input type="search" name="top-search-bar" class="form-control" placeholder="Search and hit enter...">
+							<button type="submit">Search</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- ***** Top Search Area End ***** -->
+ </head>
+  <header class="header-area">
+	<!-- Main Header Start -->
+	<div class="main-header-area">
+		<div class="classy-nav-container breakpoint-off">
+			<!-- Classy Menu -->
+			<nav class="classy-navbar justify-content-between" id="uzaNav">
+
+				<!-- Logo -->
+				<a class="nav-brand" href="index-n.php"><img src="./img/core-img/logo.png" alt=""></a>
+
+				<!-- Navbar Toggler -->
+				<div class="classy-navbar-toggler">
+					<span class="navbarToggler"><span></span><span></span><span></span></span>
+				</div>
+
+				<!-- Menu -->
+				<div class="classy-menu">
+					<!-- Menu Close Button -->
+					<div class="classycloseIcon">
+						<div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+					</div>
+
+					<!-- Nav Start -->
+					<div class="classynav">
+
+						<!-- Get A Quote -->
+						<div class="get-a-quote ml-4 mr-3">
+							<a href="#" class="btn uza-btn">Get A Quote</a>
+						</div>
+
+						<!-- Search Icon -->
+						<div class="search-icon" data-toggle="modal" data-target="#searchModal">
+							<i class="icon_search"></i>
+						</div>
+					</div>
+					<!-- Nav End -->
+
+				</div>
+			</nav>
+		</div>
+	</div>
+ </header>
+ <!-- ***** Header Area End ***** -->
+	 <!-- ***** Breadcrumb Area Start ***** -->
+	 <div class="breadcrumb-area">
+		<div class="container h-100">
+			<div class="row h-100 align-items-end">
+				<div class="col-12">
+					<h1 style="text-align: left;" style="margin :10em">Hören</h1>
+					<div class="breadcumb--con">
+						<nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index-n.php"><i class="fa fa-home"></i> Home</a></li>
+								<li class="breadcrumb-item"><a href="services.html">Services</a></li>
+    						    <li class="breadcrumb-item"><a href="hören-menu.html">Hören</a></li>
+    						    <li class="breadcrumb-item"><a href="hören-Level-menu-A1.html">A1</a></li>
+								<li class="breadcrumb-item active" aria-current="page">Level 1</li>
+							</ol>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+<!-- Background Curve -->
+<div class="breadcrumb-bg-curve">
+	<img src="./img/core-img/curve-5.png" alt="">
+</div>
+<!--Audio-->
+<div class="div3"><br/>
+	<audio controls > <source src = "Audio/A1/Track_061.mp3" type="audio/ogg"></audio>
+</div>
+<br/>
+<p class="parag">Welche Zahlen hören Sie ?</p>
+<form class="formA">
+<input id="16" type="radio" class ="c2"  name="llanguage" onclick="check1()"> 
+<label id="text00" for = "16" >16 </label>	<br/>
+<input id="60" type="radio" class ="c2"  name="language" onclick="check1()">
+<label id="text000" for = "60" > 60</label>
+<br/><br/></form>
+<script> 
+function check1(){
+localStorage.setItem("note",0);
+var ctp = 0 ;
+var aa = document.getElementById("16").checked;
+var b = document.getElementById("60").checked;
+if(aa)document.getElementById("text00").style.color = "red" ;
+else if(b){  document.getElementById("text000").style.color = "rgb(14, 233, 14)" ;
+ctp = localStorage.getItem("note");
+ctp++;
+localStorage.removeItem("note");
+localStorage.setItem("note",ctp);
+}
+document.getElementById("60").disabled=true;
+document.getElementById("16").disabled=true;
+console.log(localStorage.getItem("note"));
+ctp=0;
+document.getElementById("score").textContent="Your Score is :"+ localStorage.getItem("note") + "/9";
+}
+</script>
+<form class="formB">
+<input id="67" type="radio" class ="c2"  name="languag" onclick="check2()" > 
+<label id="text0" for = "67" >67</label><br/>
+<input id="76" type="radio" class ="c2" name="languag" onclick="check2()">
+<label id="text1" for = "76" >76</label><br/><br/>
+</form>
+<script>
+function check2(){
+var c = document.getElementById("67").checked;
+var d = document.getElementById("76").checked;
+if(d) {document.getElementById("text1").style.color = "rgb(14, 233, 14)" ;
+cpt = localStorage.getItem("note");
+cpt++;
+localStorage.removeItem("note");
+localStorage.setItem("note",cpt);}
+else if(c)document.getElementById("text0").style.color = "red" ;
+document.getElementById("67").disabled=true;
+document.getElementById("76").disabled=true;
+console.log(localStorage.getItem("note"));
+cpt=0;
+document.getElementById("score").textContent="Your Score is :"+ localStorage.getItem("note") + "/9";
+}
+</script>
+<form class="formC">
+    <input id="48" type="radio" class ="c2"  name="languagee" onclick="check3()" > 
+    <label id="text2" for = "48" >48</label><br/>
+    <input id="84" type="radio" class ="c2"  name="languagee" onclick="check3()">
+    <label id="text3" for = "84" >84</label><br/><br/>
+</form>
+<script>
+function check3(){
+var e = document.getElementById("84").checked;
+var f = document.getElementById("48").checked;
+if(e) {document.getElementById("text3").style.color = "rgb(14, 233, 14)" ;
+cpt = localStorage.getItem("note");
+	 cpt++;
+	 localStorage.removeItem("note");
+	 localStorage.setItem("note",cpt);}
+else if(f)document.getElementById("text2").style.color = "red" ;
+document.getElementById("84").disabled=true;
+document.getElementById("48").disabled=true;
+console.log(localStorage.getItem("note"));
+cpt=0;
+document.getElementById("score").textContent="Your Score is :"+ localStorage.getItem("note") + "/9";
+}
+</script>
+<form class="formD">
+    <input id="113" type="radio" class ="c2"  name="languagee" onclick="check4()" > 
+    <label id="text4" for = "113" >113</label><br/>
+    <input id="131" type="radio" class ="c2"  name="languagee" onclick="check4()">
+    <label id="text5" for = "131" >131</label><br/><br/>
+</form>
+
+<script>
+function check4(){
+var g = document.getElementById("131").checked;
+var h = document.getElementById("113").checked;
+if(g) {document.getElementById("text5").style.color = "rgb(14, 233, 14)" ;
+cpt = localStorage.getItem("note");
+	 cpt++;
+	 localStorage.removeItem("note");
+	 localStorage.setItem("note",cpt);}
+else if(h) document.getElementById("text4").style.color = "red" ;
+document.getElementById("113").disabled=true;
+document.getElementById("131").disabled=true;
+console.log(localStorage.getItem("note"));
+cpt=0;
+document.getElementById("score").textContent="Your Score is :"+ localStorage.getItem("note") + "/9";
+}
+</script>
+<form class="formE">
+    <input id="335" type="radio" class ="c2"  name="languagee" onclick="check5()" > 
+    <label id="text6" for = "335" >335</label><br/>
+    <input id="553" type="radio" class ="c2"  name="languagee" onclick="check5()">
+    <label id="text7" for = "553" >553</label><br/><br/>
+</form>
+<script>
+function check5(){
+var i = document.getElementById("335").checked;
+var j = document.getElementById("553").checked;
+if(i) {document.getElementById("text6").style.color = "rgb(14, 233, 14)" ;
+cpt = localStorage.getItem("note");
+	 cpt++;
+	 localStorage.removeItem("note");
+	 localStorage.setItem("note",cpt);}
+else if(j) document.getElementById("text7").style.color = "red" ;
+document.getElementById("335").disabled=true;
+document.getElementById("553").disabled=true;
+console.log(localStorage.getItem("note"));
+cpt=0;
+document.getElementById("score").textContent="Your Score is :"+ localStorage.getItem("note") + "/9";
+}
+</script>
+<form class="formF">
+    <input id="2120" type="radio" class ="c2"  name="languagee" onclick="check6()" > 
+    <label id="text8" for = "2120" >2120</label><br/>
+    <input id="2121" type="radio" class ="c2"  name="languagee" onclick="check6()">
+    <label id="text9" for = "2121" >2121</label><br/><br/>
+</form>
+<script>
+function check6(){
+var k = document.getElementById("2120").checked;
+var l = document.getElementById("2121").checked;
+if(k) {document.getElementById("text8").style.color = "rgb(14, 233, 14)" ;
+cpt = localStorage.getItem("note");
+	 cpt++;
+	 localStorage.removeItem("note");
+	 localStorage.setItem("note",cpt);}
+else if(l) document.getElementById("text9").style.color = "red" ;
+document.getElementById("2120").disabled=true;
+document.getElementById("2121").disabled=true;
+console.log(localStorage.getItem("note"));
+cpt=0;
+document.getElementById("score").textContent="Your Score is :"+ localStorage.getItem("note") + "/9";
+}
+</script>
+<form class="formG">
+    <input id="3335" type="radio" class ="c2"  name="languagee" onclick="check7()" > 
+    <label id="text10" for = "3335" >3335</label><br/>
+    <input id="3353" type="radio" class ="c2" name="languagee" onclick="check7()">
+    <label id="text11" for = "3353" >3353</label><br/><br/>
+</form>
+<script>
+	function check7(){
+		var m = document.getElementById("3335").checked;
+		var n = document.getElementById("3353").checked;
+		if(m) {document.getElementById("text10").style.color = "rgb(14, 233, 14)" ;
+		cpt = localStorage.getItem("note");
+	 cpt++;
+	 localStorage.removeItem("note");
+	 localStorage.setItem("note",cpt);}
+	   else if(n) document.getElementById("text11").style.color = "red" ; 
+	 document.getElementById("3335").disabled=true;
+	 document.getElementById("3353").disabled=true;
+	 console.log(localStorage.getItem("note"));
+cpt=0;
+document.getElementById("score").textContent="Your Score is :"+ localStorage.getItem("note") + "/9";
+	}
+</script>
+<form class="formH">
+    <input id="6667" type="radio" class ="c2"  name="languagee" onclick="check8()" > 
+    <label id="text12" for = "6667" >6667</label><br/>
+    <input id="6676" type="radio" class ="c2"  name="languagee" onclick="check8()">
+    <label id="text13" for = "6676" >6676</label><br/><br/>
+</form>
+<script>
+function check8(){
+	var o = document.getElementById("6676").checked;
+	var p = document.getElementById("6667").checked;
+	if(o) {document.getElementById("text13").style.color = "rgb(14, 233, 14)" ;
+	cpt = localStorage.getItem("note");
+	 cpt++;
+	 localStorage.removeItem("note");
+	 localStorage.setItem("note",cpt);}
+    else if(p) document.getElementById("text12").style.color = "red" ;
+	document.getElementById("6667").disabled=true;
+	document.getElementById("6676").disabled=true;
+	console.log(localStorage.getItem("note"));
+cpt=0;
+document.getElementById("score").textContent="Your Score is :"+ localStorage.getItem("note") + "/9";
+}
+</script>
+<form class="formI">
+    <input id="9889" type="radio" class ="c2"  name="languagee" onclick="check9()" > 
+    <label id="text14" for = "9889" >9889</label><br/>
+    <input id="9998" type="radio" class ="c2"  name="languagee" onclick="check9()">
+    <label id="text15" for = "9998" >9998</label><br/>
+</form>
+<script>
+function check9(){
+var ctr ; 
+var q = document.getElementById("9889").checked;
+var r = document.getElementById("9998").checked;
+if(q) {document.getElementById("text14").style.color = "rgb(14, 233, 14)" ;
+cpt = localStorage.getItem("note");
+	 cpt++;
+	 localStorage.removeItem("note");
+	 localStorage.setItem("note",cpt);}
+else if(r) document.getElementById("text15").style.color = "red" ;
+document.getElementById("9889").disabled=true;
+document.getElementById("9998").disabled=true;
+console.log(localStorage.getItem("note"));
+cpt=0;
+document.getElementById("score").textContent="Your Score is :"+ localStorage.getItem("note") + "/9";
+localStorage.removeItem("note");
+}
+</script>
+<br/>
+<!--<td width=330;><input type="text" class=inpu name="prozbox" size="4"  value="... %" readonly><br/>-->
+<a href="Ex3_Level1.html" class="btn uza-btnn btn-2 mt-4" data-animation="fadeInUp" data-delay="700ms">Next</a><br/><br/><br/>
+<h2 class="btn uza-btnn" id="score">Your Score is :</h2><br/>
+
+<script src="Un.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/uza.bundle.js"></script>
+<script src="js/default-assets/active.js"></script>
+</body>
+</html>

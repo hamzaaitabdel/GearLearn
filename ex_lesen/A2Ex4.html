@@ -1,0 +1,129 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <link rel="stylesheet" href="style2.css">
+<meta charset="UTF-8">
+
+    <!-- Title -->
+    <title>GerLearn</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="./img/core-img/favicon.ico">
+
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-popup.scss">
+    <script src="main.js"></script>
+  </head>
+  <style>
+    body {
+    
+    background-color: rgb(217, 234, 250);
+    
+    background-repeat: no-repeat;
+  }
+</style>
+
+  <body>
+    <div class="label1">
+      <label class="titlestory"><strong>Menschen nach Österreich :</strong></label></div>
+
+    <div class="text_area">
+      <textarea id="Geschichte" class="story" readonly name="Geschichte" rows="10" cols="70">
+        Im Sommer reisen viele Menschen gerne nach Österreich. Besonders in Wien und Salzburg treffen sich Touristen aus aller Welt, um auf Konzerte zu gehen, Museen zu besuchen und außerhalb der Städte kurze Wanderungen zu unternehmen. In Wien besuchen die Touristen am liebsten den Stephansdom und das Schloss Schönbrunn; in Salzburg besonders die Festung Hohensalzburg und das Haus, in dem der Komponist Wolfgang Amadeus Mozart geboren wurde.
+        Wer nach Österreich reist, schläft gerne im Hotel, deswegen sind manche Hotels im Sommer ausgebucht. Andere Leute übernachten gerne in Jugendherbergen oder mieten Wohnungen, in denen sie sich selbst versorgen müssen. Im Internet vergleichen sie die Preise und finden so das günstigste und das für sie beste Angebot in der Stadt. Überrascht sind sie oft, weil die Supermärkte in Österreich am Wochenende und in der Nacht nicht geöffnet sind. Trotzdem gefällt es den meisten Touristen in Wien und Salzburg sehr gut, schließlich kommen viele auch gerne wieder nach Österreich zurück.
+      </textarea>
+    </div>
+    <div class="question">
+      <label class="question"><strong> Fragen :</strong></label></div>
+
+    <div class="question1">
+      <label class="question1"><strong>F1 : </strong>Was machen viele Touristen in Wien und Salzburg?</label></div>
+
+    <div class="answer1">
+      <label class="answer1"><strong>A1 : </strong></label>
+      <input type="radio" name="answer">Sie arbeiten
+      <input type="radio" name="answer">Sie ruhen sich aus
+      <input id="1" type="radio" name="answer">Sie gehen auf Konzerte und ins Museum
+      <input type="radio" name="answer">Sie fahren lieber woanders hin</div>
+
+
+
+    <div class="question2">
+      <label class="question2"><strong>F2 :</strong>Welche Sehenswürdigkeiten besuchen sie gerne in Wien?</label></div>
+
+    <div class="answer2">
+      <label class="answer2"><strong>A2 : </strong></label>
+        <input type="radio" name="answer1">Das Geburtshaus Mozarts und die Festung Hohensalzburg
+        <input id="2" type="radio" name="answer1">Den Stephansdom und das Schloss Schönbrunn
+        <input type="radio" name="answer1">Den Minimundus und den Bodensee
+        <input type="radio" name="answer1">Das Schloss Esterházy und den Uhrturm</div>
+
+    <div class="question3">
+      <label class="question3"><strong>F3 :</strong>Welche Sehenswürdigkeiten besuchen sie gerne in Salzburg?</label></div>
+
+    <div class="answer3">
+      <label class="answer3"><strong>A3 : </strong></label>
+        <input id="3" type="radio" name="answer2">Das Geburtshaus Mozarts und die Festung Hohensalzburg
+        <input type="radio" name="answer2">Den Stephansdom und das Schloss Schönbrunn
+        <input type="radio" name="answer2">Das Schloss Esterházy und den Uhrturm
+        <input type="radio" name="answer2">Den Minimundus und den Bodensee</div>
+
+    <div class="question4">
+      <label class="question4"><strong>F4 :</strong>Wie finden die Touristen eine günstige Unterkunft?</label></div>
+
+    <div class="answer4">
+      <label class="answer4"><strong>A4 : </strong></label>
+        <input id="4" type="radio" name="answer3">Im Internet
+        <input type="radio" name="answer3">Auf Facebook
+        <input type="radio" name="answer3">In der Stadt
+        <input type="radio" name="answer3">Im Katalog</div>
+
+    <div class="question5">
+      <label class="question5"><strong>F5 :</strong>Warum sind viele Touristen überrascht?</label></div>
+
+    <div class="answer5">
+      <label class="answer5"><strong>A5 : </strong></label>
+        <input type="radio" name="answer4">Weil Österreich so schön ist
+        <input type="radio" name="answer4">Weil die Leute immer Lederhosen tragen
+        <input id="5" type="radio" name="answer4">Weil die Supermärkte am Wochenende und abends geschlossen haben
+        <input type="radio" name="answer4">Weil sie günstige Wohnungen mieten können und es keine Hotels gibt.</div>
+
+        <div class="yourscore">
+            <p id="score">Your Score is : </p>
+        </div>
+
+        <script>
+        localStorage.setItem("note",0);
+        var a = 0;
+        var c=0;
+        var con = true;
+        var idan=["1","2","3","4","5"];
+
+
+        function check1(){
+            for(var i=1;i<6;i++){
+              var x = document.getElementById(i+"").checked;
+
+                if(x && con){
+                  a = localStorage.getItem("note");
+                  a++;
+                  localStorage.removeItem("note");
+                  localStorage.setItem("note",a);
+                }
+            }
+            console.log(localStorage.getItem("note"));
+            a=0;
+            document.getElementById("score").textContent="Your Score is : "+localStorage.getItem("note");
+            localStorage.removeItem("note");
+            }
+
+
+
+        </script>
+
+          <div class="submit">
+            <a id="myBtn" class="btn uza-btn" onclick="check1()">Submit</a></div>
+
+  </body>
+</html>

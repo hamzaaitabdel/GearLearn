@@ -1,0 +1,420 @@
+table {
+    width: 60%;
+    margin-left: 90px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ccc;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	position: relative;
+}
+body {
+	font-size: 100.01%;
+}
+
+
+.block {
+	overflow: hidden;
+}
+#container, .inside {
+	position: relative;
+}
+#main .inside {
+	min-height: 1px;
+}
+#main, #left, #right {
+	float: left;
+	position: relative;
+}
+#main {
+	width: 100%;
+}
+/* @media all and (max-width:767px) */
+#main, #left, #right {
+	float: none;
+	width: auto;
+}
+/* @media all and (max-width:767px) */
+#container {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+#wrapper > #container {
+	position: relative;
+}
+/* @media screen and (max-width:992px) */
+#wrapper > #container {
+	padding: 60px 1em 1em 1em;
+}
+/* @media all and (max-width:767px) */
+#wrapper {
+	margin: 0;
+	width: auto;
+}
+
+body, form, figure {
+	margin: 0px;
+	padding: 0;
+}
+body {
+	font-family: "Open Sans",Verdana,Arial,Helvetica,sans-serif;
+	font-size: 14px;
+	line-height: 1.4;
+	color: #333;
+	background-color: white;
+  text-rendering: optimizeLegibility;
+  margin-left: 100px;
+}
+/* @media screen and (max-width:992px) */
+
+html {
+	line-height: 1;
+}
+table tbody tr {
+	border-bottom: 1px dashed white;
+}
+table tbody tr:nth-child(2n+1) {
+	background: #FBFBFB;
+}
+table tbody tr:nth-child(2n) {
+	background: #f2f2f2;
+}
+caption, th, td {
+	text-align: left;
+	font-weight: normal;
+	vertical-align: middle;
+}
+p, td,li {
+  font-size: 1em;
+  text-decoration: solid;
+  font-family: serif;
+  font-size: medium;
+  
+}
+table td, table th {
+	padding: .5em 1em;
+	border-width: 1px;
+	border-style: dashed;
+	border-color: #ccc;
+}
+table td:first-child, table th:first-child {
+	border: 0;
+}
+select, input, textarea {
+	font-size: 99%;
+}
+
+
+
+
+td input[type='text'] {
+	width: auto !important;
+	max-width: 200px !important;
+  min-width: 50px !important;
+  background-color: rgb(255, 255, 255);
+  list-style: armenian;
+  margin: 0 .25rem;
+  
+  border: 1px solid #9dc9f1;
+  border-left: 3px solid;
+  border-right: 3px solid;
+  border-right-color: #9dc9f1;
+  border-radius: 5px;
+  border-left-color: #9dc9f1;
+}
+strong, b {
+	font-weight: 600;
+}
+input{
+  background-color: rgb(255, 255, 255);
+  list-style: armenian;
+  font-size: 17px;
+
+border: 1px solid #9dc9f1;
+border-left: 3px solid;
+border-right: 3px solid;
+border-right-color: #9dc9f1;
+border-radius: 5px;
+border-left-color: #9dc9f1;
+
+}  
+
+
+
+/* exercice easy */
+
+
+
+
+/*
+.body{
+  background-image: url("backgroung.jpg");
+}
+  
+.header {
+  background-color: lightblue;
+  text-align: center;
+  padding: 20px;
+}
+
+ol {
+    background: #ff9999;
+    padding: 20px;
+  }
+  
+  ul {
+    background:transparent;
+    padding: 20px;
+    font-size: 23px;
+    border: azure;;
+  }
+  
+  ol li {
+    background: #ffe5e5;
+    padding: 5px;
+    margin-left: 35px;
+  }
+  
+  ul li {
+    background: #cce5ff;
+    margin: 5px;
+  }
+  input{
+    background-color: paleturquoise;
+    list-style: armenian;
+  }
+
+  select{
+      font-size: 23px;
+  }
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  /* Style the topnav links 
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change color on hover *
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Create three equal columns that floats next to each other *
+  .column {
+    float: left;
+    width: 30.33%;
+    padding: 30px;
+  }
+  .content{
+    float: left;
+    width: 60%;
+    padding: 15px;
+    align-items: center;
+  }
+  
+  /* Clear floats after the columns *
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other *
+  @media screen and (max-width:600px) {
+    .column {
+      width: 100%;
+    }
+  }
+
+  .menu_pincip {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+  }
+  
+  li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change the link color on hover 
+  li a:hover {
+    background-color: #555;
+    color: white;
+  }*/
+
+
+  
+  .combo-box select{
+     background-color: #9dc9f1;  
+     margin-right: 0px;
+  
+
+  }
+  /*the container must be positioned relative:*/
+.custom-select {
+  border-color: #ffffff;
+  background: transparent;
+  font-family: Arial;
+  
+  border-radius: 16px 16px 16px 16px;
+  padding-right: 0px;
+  padding-left: 0px;
+  left:20px;
+  margin-bottom: 5px;
+  margin-right: 0px;
+  left: 0px;
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element:*/
+  
+}
+
+
+.select-selected {
+  background-color: DodgerBlue;
+}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 10px;
+  right: 7px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color:  transparent transparent transparent transparent;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent transparent transparent;
+  top: 3px;
+  
+    
+  
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div,.select-selected {
+  color: #2b2a2a;
+  padding: 0px ;
+  border-radius: 16px 16px 16px 16px;
+  background-color: #9dc9f1;
+  border: 1px solid transparent;
+  text-align: center;
+  
+  
+  cursor: pointer;
+  user-select: none;
+}
+
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: transparent;
+  text-align: center;
+  width: 70px;
+  top: 90%;
+  left: 0%;
+  right: 28%;
+  z-index: 99;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+.btn{
+display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 17px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.btn-success {
+  color: #fff;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+}
+
+
+
+
+
+.button {
+  display: inline-block;
+  border-radius: 12px;
+  background-color: dodgerblue;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-family: cursive;
+  font-size: 28px;
+  padding: 10px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  margin-left: 43%;
+  margin-top: 2%;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}

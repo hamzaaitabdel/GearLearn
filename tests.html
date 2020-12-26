@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Drag Exercice</title>
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<meta name="viewport" content="width=device-width">
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	<meta charset="UTF-8">
+	<meta name="description" content="GerLearn">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="style-popup.scss">
+
+<body>
+	<style>
+		body {
+			font-family: Arial, Helvetica, sans-serif;
+		}
+
+		/* The Modal (background) */
+		.modal {
+			display: none;
+			/* Hidden by default */
+			position: fixed;
+			/* Stay in place */
+			z-index: 1;
+			/* Sit on top */
+			padding-top: 100px;
+			/* Location of the box */
+			left: 0;
+			top: 0;
+			width: 100%;
+			/* Full width */
+			height: 100%;
+			/* Full height */
+			overflow: auto;
+			/* Enable scroll if needed */
+			background-color: rgb(0, 0, 0);
+			/* Fallback color */
+			background-color: rgba(0, 0, 0, 0.4);
+			/* Black w/ opacity */
+		}
+
+		/* Modal Content */
+		.modal-content {
+			background-color: #fefefe;
+			margin: auto;
+			padding: 20px;
+			border: 1px solid #888;
+			width: 80%;
+		}
+
+		/* The Close Button */
+		.close {
+			color: #aaaaaa;
+			float: right;
+			font-size: 28px;
+			font-weight: bold;
+		}
+
+		.close:hover,
+		.close:focus {
+			color: #000;
+			text-decoration: none;
+			cursor: pointer;
+		}
+	</style>
+	</head>
+
+	<body>
+
+
+		<!-- Trigger/Open The Modal -->
+	
+		</div>
+		<ul id="nav">
+			<li><a class="search-icon" data-toggle="modal" href="#"><i class="icon_profile"></i></a>
+				<ul class="dropdown">
+					<li><a href="" id="myBtn1">- Profile</a></li>
+					<li><a href="">- Deconnection</a></li>
+				</ul>
+				<li><a href=""></a>Username</li>
+			</li>
+			<li><a href=""></a></li>
+		</ul>
+
+		<!-- The Modal -->
+		<div id="myModal1" class="modal">
+
+			<!-- Modal content -->
+			<link rel="stylesheet"
+				href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+			<style>
+				.card {
+					box-shadow: 0 4px 8px 0 rgb(0, 0, 0);
+					max-width: 300px;
+					margin: auto;
+					text-align: center;
+					font-family: arial;
+				}
+
+				.title {
+					color: grey;
+					font-size: 18px;
+				}
+
+				button {
+					border: none;
+					outline: 0;
+					display: inline-block;
+					padding: 8px;
+					color: white;
+					background-color: #1583E9;
+					text-align: center;
+					cursor: pointer;
+					width: 100%;
+					font-size: 18px;
+				}
+
+				a {
+					text-decoration: none;
+					font-size: 22px;
+					color: #1583E9;
+				}
+
+				button:hover,
+				a:hover {
+					opacity: 0.7;
+				}
+			</style>
+
+
+
+
+
+
+			<div class="card">
+				<img src="man.jpg" alt="John" style="width:100%">
+				<h1>Username</h1>
+				<p class="title">Email</p>
+				<p>Day of bith</p>
+				<div style="margin: 24px 0;">
+					<a href="#"><i class="fa fa-dribbble"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="#"><i class="fa fa-facebook"></i></a>
+				</div>
+				<p><button>Deconnection</button></p>
+			</div>
+
+
+			<script>
+
+				// Get the modal
+				var modal = document.getElementById("myModal1");
+
+				// Get the button that opens the modal
+				var btn = document.getElementById("myBtn1");
+
+				// Get the <span> element that closes the modal
+				var span = document.getElementsByClassName("close")[0];
+
+				// When the user clicks the button, open the modal 
+				btn.onclick = function () {
+					modal.style.display = "block";
+				}
+
+				// When the user clicks on <span> (x), close the modal
+				span.onclick = function () {
+					modal.style.display = "none";
+				}
+
+				// When the user clicks anywhere outside of the modal, close it
+				window.onclick = function (event) {
+					if (event.target == modal) {
+						modal.style.display = "none";
+					}
+				}
+			</script>
+	</body>

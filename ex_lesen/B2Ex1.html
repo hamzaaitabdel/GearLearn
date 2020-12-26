@@ -1,0 +1,131 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <link rel="stylesheet" href="style2.css">
+<meta charset="UTF-8">
+
+    <!-- Title -->
+    <title>GerLearn</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="./img/core-img/favicon.ico">
+
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-popup.scss">
+    <script src="main.js"></script>
+  </head>
+
+  <style>
+    body {
+    
+    background-color: rgb(217, 234, 250);
+    
+    background-repeat: no-repeat;
+  }
+</style>
+  <body>
+    <div class="label1">
+      <label class="titlestory"><strong>Die Geschichte von Anna und Stefan :</strong></label></div>
+
+    <div class="text_area">
+      <textarea id="Geschichte" class="story" readonly name="Geschichte" rows="10" cols="70">
+        Noch wenige Minuten bis zum Anpfiff des Fußballspiels im Stadion. Ganz Zürich freut sich seit vielen Tagen, dass das Spiel endlich beginnt. Das Stadion Letzigrund ist seit Wochen ausverkauft und die 34.000 Zuschauer machen bereits einen riesigen Lärm.
+        Mit dem Wetter haben Zuschauer und Spieler Glück, der Himmel ist blau und es ist 30 Grad warm. Überall riecht es nach gutem Essen. Die Zuschauer nehmen noch die letzten Getränke und Essen zu sich.
+        Jetzt kommen endlich die 22 Spieler sowie die 3 Schiedsrichter auf das Feld. Blau spielt gegen Rot. Wer wird am heutigen Tag nach 90 Minuten der Sieger sein? Gibt es sogar eine Verlängerung oder ein Elfmeterschießen?
+        Den Fans ist dies nicht wichtig, Hauptsache es wird eine Menge Tore geben und es kann gefeiert werden. Bevor das Spiel beginnt, wird die Hymne gespielt so wie es sich für ein Pokalendspiel gehört. Alle Zuschauer erheben sich von den Sitzen und singen mit. Die Spieler sind teils ruhig, teils bewegen sie ihre Lippen. Das Lied ist jetzt zu Ende, alle klatschen begeistert in die Hände, schwingen ihre Fahnen und die Spieler stellen sich auf.
+        Blau gewinnt das Anspiel. Der Schiedsrichter nimmt die Pfeife in den Mund und endlich geht es los! Anpfiff! Der Ball rollt!
+      </textarea>
+    </div>
+    <div class="question">
+      <label class="question"><strong> Fragen :</strong></label></div>
+
+    <div class="question1">
+      <label class="question1"><strong>F1 : </strong>In welcher Stadt findet das Spiel statt?</label></div>
+
+    <div class="answer1">
+      <label class="answer1"><strong>A1 : </strong></label>
+      <input type="radio" name="answer">in Basel
+      <input type="radio" name="answer">in München
+      <input type="radio" name="answer">in Berlin
+      <input id="1" type="radio" name="answer">in Zürich</div>
+
+    <div class="question2">
+      <label class="question2"><strong>F2 :</strong>Wie heißt das Stadion wo gespielt wird?</label></div>
+
+    <div class="answer2">
+      <label class="answer2"><strong>A2 : </strong></label>
+      <input id="2" type="radio" name="answer1">Letzigrund
+      <input type="radio" name="answer1">Wembley
+      <input type="radio" name="answer1">Olympiastadion
+      <input type="radio" name="answer1">Arena</div>
+
+    <div class="question3">
+      <label class="question3"><strong>F3 :</strong>Wie viele Zuschauer sind im Stadion anwesend?</label></div>
+
+    <div class="answer3">
+      <label class="answer3"><strong>A3 : </strong></label>
+        <input type="radio" name="answer2">etwa 20.000 Zuschauer
+        <input id="3" type="radio" name="answer2">mehr als 30.000 Zuschauer
+        <input type="radio" name="answer2">weniger als 30.000 Zuschauer
+        <input type="radio" name="answer2">mehr als 40.000 Zuschauer</div>
+
+    <div class="question4">
+      <label class="question4"><strong>F4 :</strong>Wer gewinnt das Anspiel?</label></div>
+
+    <div class="answer4">
+      <label class="answer4"><strong>A4 : </strong></label>
+        <input type="radio" name="answer3">Rot
+        <input id="4" type="radio" name="answer3">Blau
+        <input type="radio" name="answer3">Gelb
+        <input type="radio" name="answer3">Grün</div>
+
+    <div class="question5">
+      <label class="question5"><strong>F5 :</strong>Wie heißt das Ereignis des Fußballspiels?</label></div>
+
+    <div class="answer5">
+      <label class="answer5"><strong>A5 : </strong></label>
+        <input type="radio" name="answer4">Meisterschaft
+        <input id="5" type="radio" name="answer4">Pokalendspiel
+        <input type="radio" name="answer4">Europacup
+        <input type="radio" name="answer4">Länderspiel</div>
+
+        <div class="yourscore">
+            <p id="score">Your Score is : </p>
+        </div>
+
+        <script>
+        localStorage.setItem("note",0);
+        var a = 0;
+        var c=0;
+        var con = true;
+        var idan=["1","2","3","4","5"];
+
+
+        function check1(){
+            for(var i=1;i<6;i++){
+              var x = document.getElementById(i+"").checked;
+
+                if(x && con){
+                  a = localStorage.getItem("note");
+                  a++;
+                  localStorage.removeItem("note");
+                  localStorage.setItem("note",a);
+                }
+            }
+            console.log(localStorage.getItem("note"));
+            a=0;
+            document.getElementById("score").textContent="Your Score is : "+localStorage.getItem("note");
+            localStorage.removeItem("note");
+            }
+
+
+
+        </script>
+
+          <div class="submit">
+            <a id="myBtn" class="btn uza-btn" onclick="check1()">Submit</a></div>
+
+
+  </body>
+</html>

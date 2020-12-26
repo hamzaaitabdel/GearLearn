@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hören</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="GerLearn">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel = "stylesheet" href = "Un.css">
+	<link rel = "stylesheet" href = "style.css">
+
+</head>
+<body>
+		   
+	<div id="preloader">
+		<div class="wraper">
+			<div class="cssload-loader"></div>
+		</div>
+	</div>
+
+	<!-- ***** Top Search Area Start ***** -->
+	<div class="top-search-area">
+		<!-- Search Modal -->
+		<div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-body">
+						<!-- Close Button -->
+						<button type="button" class="btn close-btn" data-dismiss="modal"><i class="fa fa-times"></i></button>
+						<!-- Form -->
+						<form action="index.html" method="post">
+							<input type="search" name="top-search-bar" class="form-control" placeholder="Search and hit enter...">
+							<button type="submit">Search</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- ***** Top Search Area End ***** -->
+ </head>
+  <header class="header-area">
+	<!-- Main Header Start -->
+	<div class="main-header-area">
+	<div class="classy-nav-container breakpoint-off">
+	<!-- Classy Menu -->
+	<nav class="classy-navbar justify-content-between" id="uzaNav">
+
+	<!-- Logo -->
+	 <a class="nav-brand" href="index.html"><img src="./img/core-img/logo.png" alt=""></a>
+
+	<!-- Navbar Toggler -->
+	<div class="classy-navbar-toggler">
+	 <span class="navbarToggler"><span></span><span></span><span></span></span>
+	</div>
+
+	<!-- Menu -->
+	<div class="classy-menu">
+	 <!-- Menu Close Button -->
+	  <div class="classycloseIcon">
+	   <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+	  </div>
+	 <!-- Nav Start -->
+	  <div class="classynav">
+	 <!-- Get A Quote -->
+	 <div class="get-a-quote ml-4 mr-3">
+	  <a href="#" class="btn uza-btn">Get A Quote</a>
+	 </div>
+
+	 <!-- Search Icon -->
+	 <div class="search-icon" data-toggle="modal" data-target="#searchModal">
+	  <i class="icon_search"></i>
+	 </div>
+	 </div>
+	 <!-- Nav End -->
+    </div>
+	</nav>
+   </div>
+  </div>
+ </header>
+ <!-- ***** Header Area End ***** -->
+  <!-- ***** Breadcrumb Area Start ***** -->
+   <div class="breadcrumb-area">
+	<div class="container h-100">
+     <div class="row h-100 align-items-end">
+	  <div class="col-12">
+	  <h1 style="text-align: left;" style="margin :10em">Hören</h1>
+	   <div class="breadcumb--con">
+		<nav aria-label="breadcrumb">
+		 <ol class="breadcrumb">
+		 <li class="breadcrumb-item"><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+			<li class="breadcrumb-item"><a href="services.html"> Services</a></li>
+			<li class="breadcrumb-item"><a href="hören-menu.html"> Hören</a></li>
+         <li class="breadcrumb-item"><a href="hören-Level-menu-A2.html"> A2</a></li>
+		 <li class="breadcrumb-item active" aria-current="page">Level 9</li>
+		 </ol>
+        </nav>
+       </div>
+	  </div>
+	 </div>
+	</div>
+ <!-- Background Curve -->
+  <div class="breadcrumb-bg-curve">
+   <img src="./img/core-img/curve-5.png" alt="">
+  </div>
+ <!--Audio-->
+ <br/>
+ <h4>Hören Sie das Gespräch zwischen Sophia und Nils . In welcher Reihenfloge sie über die Themen ?</h4><br/>
+ <div class="div3"><br/>
+	<audio controls > <source src = "Audio/A2/Track_004.mp3" ></audio>
+</div><br/>
+
+<p class="parag">Besteck und Geschirr.</p>
+</script>
+   <div class="div 1">
+    <input id="a" type="radio" class ="c2"  name="zzz" onclick="check1()"> 
+    <label id="text1" for = "a" >1</label><br/>
+    <input id="b" type="radio" class ="c2"  name="zzz" onclick="check1()">
+    <label id="text2" for = "b" >2</label><br/>
+    <input id="c" type="radio" class ="c2"  name="zzz" onclick="check1()"> 
+    <label id="text3" for = "c" >3</label><br/>
+    <input id="d" type="radio" class ="c2"  name="zzz" onclick="check1()"> 
+    <label id="text4" for = "d" >4</label>
+</div>
+<script>
+ function check1(){
+	localStorage.setItem("note",0);
+	var cpt = 0 ;
+ var h = document.getElementById("c").checked;
+ var hh = document.getElementById("b").checked;
+ var hhh = document.getElementById("a").checked;
+ var hhhh = document.getElementById("d").checked;
+ if(h) {document.getElementById("text3").style.color = " rgb(14, 233, 14)" ;
+ cpt = localStorage.getItem("note");
+	cpt++;
+	localStorage.removeItem("note");
+	localStorage.setItem("note",cpt);}
+ else if(hh){ document.getElementById("text2").style.color = " red" ;
+ document.getElementById("text3").style.color = " rgb(14, 233, 14)" ;}
+ else if(hhh) {document.getElementById("text1").style.color = " red" ;
+ document.getElementById("text3").style.color = " rgb(14, 233, 14)" ;}
+ else if(hhhh) {document.getElementById("text4").style.color = " red" ;
+ document.getElementById("text3").style.color = " rgb(14, 233, 14)" ;}
+ document.getElementById("a").disabled=true;
+ document.getElementById("b").disabled=true;
+ document.getElementById("c").disabled=true;
+ document.getElementById("d").disabled=true;
+ console.log(localStorage.getItem("note"));
+	cpt=0;
+	document.getElementById("score").textContent="Your Score is :"+ localStorage.getItem("note") + "/4";
+}
+</script>
+<p class="parag">Abschlussfeier.</p>
+<div class="div 1">
+    <input id="aa" type="radio" class ="c2"  name="yyy" onclick="check2()"> 
+    <label id="text7" for = "aa" >1</label><br/>
+    <input id="bb" type="radio" class ="c2"  name="yyy" onclick="check2()">
+    <label id="text5" for = "bb" >2</label><br/>
+    <input id="cc" type="radio" class ="c2"  name="yyy" onclick="check2()"> 
+    <label id="text6" for = "cc" >3</label><br/>
+    <input id="dd" type="radio" class ="c2"  name="yyy" onclick="check2()"> 
+    <label id="text8" for = "dd" >4</label>
+</div>
+<script>
+ function check2(){
+ var k = document.getElementById("aa").checked;
+ var kk = document.getElementById("bb").checked;
+ var kkk = document.getElementById("cc").checked; 
+ var kkkk = document.getElementById("dd").checked;
+ if(k) {document.getElementById("text7").style.color = " rgb(14, 233, 14)" ;
+ cpt = localStorage.getItem("note");
+	cpt++;
+	localStorage.removeItem("note");
+	localStorage.setItem("note",cpt);}
+ else if(kk) {document.getElementById("text5").style.color = " red" ;
+ document.getElementById("text7").style.color = " rgb(14, 233, 14)" ;}
+ else if(kkk) {document.getElementById("text6").style.color = " red" ;
+ document.getElementById("text7").style.color = " rgb(14, 233, 14)" ;}
+ 
+ else if(kkkk) {document.getElementById("text8").style.color = " red" ;
+ document.getElementById("text7").style.color = " rgb(14, 233, 14)" ;}
+ document.getElementById("aa").disabled=true;
+ document.getElementById("dd").disabled=true;
+ document.getElementById("bb").disabled=true;
+ document.getElementById("cc").disabled=true;
+ console.log(localStorage.getItem("note"));
+	cpt=0;
+	document.getElementById("score").textContent="Your Score is :"+ localStorage.getItem("note") + "/4";}
+</script>
+
+<p class="parag">das Essen auf der Party</p>
+<div class="div 1">
+    <input id="ddd" type="radio" class ="c2"  name="rrr" onclick="check3()"> 
+    <label id="text77" for = "ddd" >1 </label><br/>
+    <input id="bbb" type="radio" class ="c2"  name="rrr" onclick="check3()">
+    <label id="text88" for = "bbb" >2 </label><br/>
+    <input id="ccc" type="radio" class ="c2"  name="rrr" onclick="check3()"> 
+    <label id="text9" for = "ccc" >3 </label><br/>
+    <input id="aaa" type="radio" class ="c2"  name="rrr" onclick="check3()"> 
+    <label id="text99" for = "aaa" > 4</label>
+</div>
+<script>
+ function check3(){
+ var g = document.getElementById("bbb").checked;
+ var ggg = document.getElementById("ddd").checked;
+ var gg = document.getElementById("ccc").checked;
+ var gggg = document.getElementById("aaa").checked;
+
+ if(g) {document.getElementById("text88").style.color = " rgb(14, 233, 14)" ;
+ cpt = localStorage.getItem("note");
+	cpt++;
+	localStorage.removeItem("note");
+	localStorage.setItem("note",cpt);}
+ else if(gg) {document.getElementById("text9").style.color = " red" ;
+ document.getElementById("text88").style.color = " rgb(14, 233, 14)" ;}
+ else if(ggg) {document.getElementById("text77").style.color = " red" ;
+ document.getElementById("text88").style.color = " rgb(14, 233, 14)" ;}
+ else if(gggg) {document.getElementById("text99").style.color = " red" ;
+ document.getElementById("text88").style.color = " rgb(14, 233, 14)" ;}
+ document.getElementById("bbb").disabled=true;
+ document.getElementById("ccc").disabled=true;
+ document.getElementById("ddd").disabled=true;
+ document.getElementById("aaa").disabled=true;
+ console.log(localStorage.getItem("note"));
+	cpt=0;
+	document.getElementById("score").textContent="Your Score is :"+ localStorage.getItem("note") + "/4";
+}
+</script>
+<p class="parag">Einkaufenn für die Party .</p>
+<div class="div 1">
+    <input id="dddd" type="radio" class ="c2"  name="rrrr" onclick="check4()"> 
+    <label id="text13" for = "dddd" >1 </label><br/>
+    <input id="bbbb" type="radio" class ="c2"  name="rrrr" onclick="check4()">
+    <label id="text11" for = "bbbb" >2 </label><br/>
+    <input id="cccc" type="radio" class ="c2"  name="rrrr" onclick="check4()"> 
+    <label id="text12" for = "cccc" >3 </label><br/>
+    <input id="aaaa" type="radio" class ="c2"  name="rrrr" onclick="check4()"> 
+    <label id="text14" for = "aaaa" > 4</label>
+</div>
+<script>
+    function check4(){
+    var qq = document.getElementById("aaaa").checked;
+    var qqq = document.getElementById("dddd").checked;
+    var qqqq = document.getElementById("cccc").checked;
+    var qqqqq = document.getElementById("bbbb").checked;
+	if(qq) {document.getElementById("text14").style.color = " rgb(14, 233, 14)" ;
+	cpt = localStorage.getItem("note");
+	cpt++;
+	localStorage.removeItem("note");
+	localStorage.setItem("note",cpt);}
+    else if(qqq) {document.getElementById("text13").style.color = " red" ;
+    document.getElementById("text14").style.color = " rgb(14, 233, 14)" ;}
+    else if(qqqq) {document.getElementById("text12").style.color = " red" ;
+    document.getElementById("text88").style.color = " rgb(14, 233, 14)" ;}
+    else if(qqqqq) {document.getElementById("text11").style.color = " red" ;
+    document.getElementById("text14").style.color = " rgb(14, 233, 14)" ;}
+    document.getElementById("bbbb").disabled=true;
+    document.getElementById("cccc").disabled=true;
+    document.getElementById("dddd").disabled=true;
+	document.getElementById("aaaa").disabled=true;
+	console.log(localStorage.getItem("note"));
+	cpt=0;
+	document.getElementById("score").textContent="Your Score is :"+ localStorage.getItem("note") + "/4";
+	localStorage.removeItem("note");
+   }
+   </script>
+
+<a href="Ex5_Level9.html" class="btn uza-btnn btn-2 mt-4" >Next</a><br/><br/>
+<h2 class="btn uza-btnn" id="score">Your Score is :</h2><br/>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/uza.bundle.js"></script>
+<script src="js/default-assets/active.js"></script>
+</body>
+</html>

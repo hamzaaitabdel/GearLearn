@@ -1,0 +1,129 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <link rel="stylesheet" href="style2.css">
+<meta charset="UTF-8">
+
+    <!-- Title -->
+    <title>GerLearn</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="./img/core-img/favicon.ico">
+
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-popup.scss">
+    <script src="main.js"></script>
+  </head>
+
+  <style>
+    body {
+    
+    background-color: rgb(217, 234, 250);
+    
+    background-repeat: no-repeat;
+  }
+</style>
+  <body>
+    <div class="label1">
+      <label class="titlestory"><strong>"Mama" :</strong></label></div>
+
+    <div class="text_area">
+      <textarea id="Geschichte" class="story" readonly name="Geschichte" rows="10" cols="70">
+        "Mama, Mama, morgen ist ja schon Nikolaustag. Meinst du er bringt mir etwas Schönes mit?" fragt der kleine Johann seine Mutter.
+        "Wenn du auch immer lieb warst und deine Stiefel schon geputzt hast, bringt der Nikolaus dir morgen bestimmt ein paar kleine Geschenke", antwortet Mama Jana. "Was bekomme ich denn?", fragt Johann immer noch ganz aufgeregt. "Das weiß ich nicht, mein Schatz. Stell einfach deine sauberen Stiefel vor die Tür und dann warten wir ab", sagt seine Mama.
+        Dann holt Johann seine blitzeblank geputzten Winterstiefel, zeigt sie stolz seiner Mama und stellt sie vor die Tür.
+      </textarea>
+    </div>
+    <div class="question">
+      <label class="question"><strong> Fragen :</strong></label></div>
+
+    <div class="question1">
+      <label class="question1"><strong>F1 : </strong>Welcher Tag ist morgen?</label></div>
+
+    <div class="answer1">
+      <label class="answer1"><strong>A1 : </strong></label>
+      <input type="radio" name="answer">Weihnachten
+      <input type="radio" name="answer">Ostern
+      <input type="radio" name="answer">Johanns Geburtstag
+      <input id="1" type="radio" name="answer">Nikolaustag</div>
+
+    <div class="question2">
+      <label class="question2"><strong>F2 :</strong>Wie heißt Johanns Mutter mit Vornamen?</label></div>
+
+    <div class="answer2">
+      <label class="answer2"><strong>A2 : </strong></label>
+      <input type="radio" name="answer1">Mama
+      <input id="2" type="radio" name="answer1">Jana
+      <input type="radio" name="answer1">Johanna
+      <input type="radio" name="answer1">Anna</div>
+
+    <div class="question3">
+      <label class="question3"><strong>F3 :</strong>Was muss Johann tun, damit der Nikolaus ihm Geschenke bringt?</label></div>
+
+    <div class="answer3">
+      <label class="answer3"><strong>A3 : </strong></label>
+        <input type="radio" name="answer2">Nach Geschenken fragen
+        <input type="radio" name="answer2">Einfach die Stiefel vor die Tür stellen
+        <input id="3" type="radio" name="answer2">Lieb sein und Stiefel putzen
+        <input type="radio" name="answer2">Früh ins Bett gehen</div>
+
+    <div class="question4">
+      <label class="question4"><strong>F4 :</strong>Wohin soll Johann seine Stiefel stellen?</label></div>
+
+    <div class="answer4">
+      <label class="answer4"><strong>A4 : </strong></label>
+        <input id="4" type="radio" name="answer3">vor die Tür
+        <input type="radio" name="answer3">in die Küche
+        <input type="radio" name="answer3">in sein Zimmer
+        <input type="radio" name="answer3">in den Garten</div>
+
+    <div class="question5">
+      <label class="question5"><strong>F5 :</strong>Was macht Johann, bevor er die Stiefel vor die Tür stellt?</label></div>
+
+    <div class="answer5">
+      <label class="answer5"><strong>A5 : </strong></label>
+        <input type="radio" name="answer4">Den Nikolaus anrufen
+        <input type="radio" name="answer4">Einen Brief schreiben
+        <input id="5" type="radio" name="answer4">Die Stiefel putzen
+        <input type="radio" name="answer4">Geschenke suchen</div>
+
+        <div class="yourscore">
+            <p id="score">Your Score is : </p>
+        </div>
+
+        <script>
+        localStorage.setItem("note",0);
+        var a = 0;
+        var c=0;
+        var con = true;
+        var idan=["1","2","3","4","5"];
+
+
+        function check1(){
+            for(var i=1;i<6;i++){
+              var x = document.getElementById(i+"").checked;
+
+                if(x && con){
+                  a = localStorage.getItem("note");
+                  a++;
+                  localStorage.removeItem("note");
+                  localStorage.setItem("note",a);
+                }
+            }
+            console.log(localStorage.getItem("note"));
+            a=0;
+            document.getElementById("score").textContent="Your Score is : "+localStorage.getItem("note");
+            localStorage.removeItem("note");
+            }
+
+
+
+        </script>
+
+          <div class="submit">
+            <a id="myBtn" class="btn uza-btn" onclick="check1()">Submit</a></div>
+
+
+  </body>
+</html>
